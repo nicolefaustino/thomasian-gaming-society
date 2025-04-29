@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomasian Gaming Society</title>
+    <link rel="stylesheet" href="pageone.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-logo">
+            <img src="TGS.png" alt="Logo">
+            <a href="pageone.html">THOMASIAN GAMING SOCIETY</a>
+        </div>
+        <nav class="navbar-links">
+            <a href="login_page.php">LOGIN</a>
+            <a href="discover.php">GAMES</a>
+            <a href="votinglist.php">RATINGS</a>
+            <a href="teams.php">TEAM</a>
+            <a href="faqs.html">FAQ</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img src="val-banner-slide.png" alt="Event 1" />
+                <img src="minecraft-banner-slide.jpg" alt="Event 2" />
+                <img src="stardew-banner-slide.jpg" alt="Event 3" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="card">
+            <div class="title">TEAM</div>
+            <div class="image">
+                <img src="group-pic.jpg" alt="Team" style="width:100%; height:100%; object-fit: cover;">
+            </div>
+            <div class="description">
+                The Thomasian Gaming Society is driven by Thomasians dedicated to fostering a gaming community through events, competitions, and camaraderie. 
+                Meet the team behind the organization that brings gamers together!
+            </div>
+            <a href="teams.php" class="cta yellow">View</a>
+        </div>
+
+        <div class="card">
+            <div class="title">GAME RATING</div>
+            <div class="image">
+                <img src="game-rating.jpg" alt="Game Rating" style="width:100%; height:100%; object-fit: cover;">
+            </div>
+            <div class="description">
+                The Game Rating page lets you share your thoughts by rating games and leaving comments. 
+                Help others discover great games while making your voice heard in the gaming community!
+            </div>
+            <a href="votinglist.php" class="cta blue">View</a>
+        </div>
+
+        <div class="card">
+            <div class="title">DISCOVER GAMES</div>
+            <div class="image">
+                <img src="discover-games.jpg" alt="Discover Games" style="width:100%; height:100%; object-fit: cover;">
+            </div>
+            <div class="description">
+                The Discover Games page is your gateway to exploring a variety of games across different genres. 
+                Find your next favorite game and start your adventure today!
+            </div>
+            <a href="discover.php" class="cta red">View</a>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            const offset = -index * 100; // Slide width in percentage
+            document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 4000); // Slide every 4 seconds
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+footer{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    font-weight: bolder;
+    color: #2f2c3e;
+    background-image:linear-gradient(to bottom, rgb(217, 223, 226), rgba(255, 255, 255, 0));
+    text-align: center;
+    display: block;
+    padding: 1px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+@font-face {
+    font-family: 'Octosquares';
+    src: url('Octosquares.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Octosquares', sans-serif;
+    background-color: #ffc18b;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #372d3c;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-logo a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.navbar-logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar-links a:hover {
+    color: red; 
+}
+
+/* Main container for game info and form */
+.content-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Styling for game info */
+.game-info {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-info h2 {
+    margin-top: 0;
+}
+
+.game-info .game-image {
+    width: 255px;      
+    height: 255px;  
+    object-fit: cover; 
+    display: block;
+    margin: 10px 0;
+}
+
+
+/* Styling for the form */
+.rating-form {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating-form h2 {
+    margin-top: 0;
+}
+
+.rating-form label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.rating-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+.rating-form textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.rating-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Octosquares', sans-serif;
+}
+
+.rating-form button:hover {
+    background-color: #45a049;
+}
+
+/* Comments section styling */
+.comments {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.commentsfrag {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.commentsfrag p {
+    margin: 5px 0;
+}
+
+.commentsfrag p:first-child {
+    font-weight: bold;
+}
+
+.commentsfrag p:last-child {
+    color: #555;
+}
+
+/* For responsive design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-info,
+    .rating-form {
+        width: 100%;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
